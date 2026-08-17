@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREE MONEY 🤑</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #111, #222);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .box {
+      width: 90%;
+      max-width: 500px;
+      padding: 35px;
+      background: #1c1c1c;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,.5);
+    }
+
+    h1 {
+      color: #00ff66;
+      font-size: 42px;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 90%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      margin-bottom: 15px;
+      outline: none;
+    }
+
+    button {
+      padding: 14px 25px;
+      border: none;
+      border-radius: 10px;
+      background: #00d95f;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00b94f;
+    }
+
+    #result {
+      display: none;
+      margin-top: 25px;
+    }
+
+    #result h2 {
+      color: #00ff66;
+    }
+
+    video {
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>FREE MONEY 🤑</h1>
+
+    <input id="name" type="text" placeholder="Nhập tên của bạn">
+
+    <br>
+
+    <button onclick="getMoney()">NHẬN TIỀN 💰</button>
+
+    <div id="result">
+      <h2 id="message"></h2>
+
+      <video id="video" controls>
+        <source src="troll.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    function getMoney() {
+      const name = document.getElementById("name").value.trim();
+
+      if (!name) {
+        alert("Vui lòng nhập tên 😭");
+        return;
+      }
+
+      document.getElementById("message").textContent =
+        `Chúc mừng ${name}! Bạn vừa nhận được 0đ 🥳`;
+
+      document.getElementById("result").style.display = "block";
+
+      document.getElementById("video").play();
+    }
+  </script>
+
+</body>
+</html>
